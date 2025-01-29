@@ -41,7 +41,7 @@
             Effective Solutions <br />
             for Your Business
         </h1>
-        <button type="button" class="button-order">Order Service</button>
+        <button type="button" class="button-order" data-modal-open>Order Service</button>
         </div>
         </section>
         <section class="section-advantages">
@@ -366,27 +366,65 @@
         </div>
     </footer>
 
-    <div class="modal-overlay is-open">
+    <div class="backdrop" data-modal>
         <div class="modal">
-            <div class="icon-container">
-            <button type="button" class="footer-icon-modal">
-                <svg class="footer-icons" width="8" height="8">
-                    <use href="./images/icons.svg#icon-Close"></use>
+            <button type="button" class="modal-close" data-modal-close>
+                <svg class="button-icon-modal" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
                 </svg>
-            </button>
-        </div>
-        <div class="modal-items">
-            <h3 class="modal-text">Leave your contacts and we will call you back</h3>
-            <form class="form-container">
-                <div class="label-form">
-                <label for="name">Name</label>
-            </div>
-            <div class="icon-form">
-                <input type="text" name="name" id="name" />
-            </div>
+            </button>    <!-- можно добавить svg иконку -->
+            <p class="modal-title">Leave your contacts and we will call you back</p>
+            <form class="modal-form">
+                <div class="modal-field">
+                <label for="user-name" class="modal-label">Name</label>
+                <div class="input-wrap">
+                <input type="text" class="modal-input" name="user-name" minlength="4" id="user-name">
+                <svg class="modal-input-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+                </div>
+                </div>
+                <div class="modal-field">
+                    <label for="user-tel" class="modal-label">Phone</label>
+                <div class="input-wrap">
+                <input type="tel" class="modal-input" name="user-tel" minlength="7" id="user-tel">
+                <svg class="modal-input-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                </div>
+                </div>
+                <div class="modal-field">
+                    <label for="user-email" class="modal-label">E-mail</label>
+                <div class="input-wrap">
+                <input type="email" class="modal-input" name="user-email" id="user-email">
+                <svg class="modal-input-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+                </div>
+                </div>
+                <div class="modal-field">
+                    <label for="user-comment" class="modal-label">Comment</label>
+                    <textarea name="user-comment" id="user-comment" class="modal-textarea" placeholder="Text input"></textarea>
+                </div>
+                <div class="modal-checkbox">
+                    <input type="checkbox" value="true" name="user-privacy" class="input-checkbox visually-hidden" id="user-privacy" />
+                    <label for="user-privacy" class="modal-label">
+                        I accept the terms and conditions of the
+                    <span class="privacy-text-checkbox">
+                    <svg class="modal-checkbox-icon" width="10" height="8">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                    </svg>
+                    </span>
+                    <a href="" class="modal-privacy-link">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="button-send-modal">Send</button>
             </form>
         </div>
     </div>
-    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
+
+
