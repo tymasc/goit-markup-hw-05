@@ -741,6 +741,10 @@ input::placeholder {
 }
 
 .modal-field {
+    margin-bottom: 8px;
+}
+
+.modal-comment {
     margin-bottom: 16px;
 }
 
