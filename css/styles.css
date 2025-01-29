@@ -544,7 +544,6 @@ input::placeholder {
 
 .p-subscribe {
     margin-bottom: 16px;
-    margin-left: 65px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -555,7 +554,6 @@ input::placeholder {
 .form-list-subscribe {
     display: flex;
     gap: 24px;
-    margin-left: 65px;
 }
 
 .input-subscribe {
@@ -607,6 +605,10 @@ input::placeholder {
 .icon-subscribe-btn {
     margin-left: 16px;
     fill: #fff;
+}
+
+.container-subscribe {
+    margin-left: 65px;
 }
 
 /* modal-window */
@@ -790,6 +792,7 @@ input::placeholder {
 }
 
 .privacy-text-checkbox {
+    margin-right: 8px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     width: 16px;
